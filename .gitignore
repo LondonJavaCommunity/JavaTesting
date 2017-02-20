@@ -1,0 +1,27 @@
+# .gitignore - to tell Git not to commit these files
+
+*.jar
+*.war
+*.class
+*.DS_Store
+*.zip
+
+# Eclipse project files
+*.index
+*.lock
+*.lck
+Servers/*
+.metadata/*
+.settings/*
+.recommenders/*
+RemoteSystemsTempFiles/*
+
+# Old sample files
+*.ldb
+*.mdb
+
+# Derby data
+*.dat
+*.ctrl
+
+*.log
