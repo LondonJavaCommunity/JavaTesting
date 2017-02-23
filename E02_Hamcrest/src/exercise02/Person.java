@@ -1,7 +1,8 @@
-package exercise03;
+package exercise02;
 
 public class Person {
 
+	private final int MAXCATS= 3;
 	private final String name;
 	int age;
 	double height;
@@ -13,7 +14,7 @@ public class Person {
 		this.name= name;
 		this.age= age;
 		this.height= height;
-		myCats= new Cat[3];		// Plenty for any sane person!!
+		myCats= new Cat[MAXCATS];		// Plenty for any sane person!!
 	}
 
 	public Person() {
@@ -49,6 +50,9 @@ public class Person {
 	}
 
 	public void addCat(Cat c) {
+		if (numCats >= MAXCATS) {
+			throw new TooManyCatsException( "Miaooooow" );
+		}
 		myCats[numCats++]= c;
 	}
 

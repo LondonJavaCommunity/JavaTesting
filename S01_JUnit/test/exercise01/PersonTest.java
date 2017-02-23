@@ -1,9 +1,13 @@
-package exercise03;
+package exercise01;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import exercise01.Cat;
+import exercise01.Person;
+import exercise01.TooManyCatsException;
 
 public class PersonTest {
 
@@ -16,6 +20,13 @@ public class PersonTest {
 		aCat = new Cat( "Millie", 4 );
 	}
 
+	@Test(expected=TooManyCatsException.class)
+	public void testAddTooManyCatsThrows() {
+		for (int i=0; i<4; i++) {
+			aPerson.addCat( aCat );
+		}
+	}
+
 	@Test
 	public void testAddCat_retrieveSameCat() {
 		aPerson.addCat( aCat );
@@ -25,10 +36,4 @@ public class PersonTest {
 		assertSame(aCat, fetchedCat);
 	}
 
-	@Test(expected=TooManyCatsException.class)
-	public void testAddTooManyCatsThrows() {
-		for (int i=0; i<4; i++) {
-			aPerson.addCat( aCat );
-		}
-	}
 }

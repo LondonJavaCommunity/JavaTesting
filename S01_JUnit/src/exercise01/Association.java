@@ -4,7 +4,7 @@
  * Mike Burton  mikeb [at] mycosystems.co.uk
  * 
  */
-package exercise03;
+package exercise01;
 
 /**
  *  Solution to Exercise 3. Association

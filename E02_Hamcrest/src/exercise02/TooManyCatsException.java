@@ -1,4 +1,4 @@
-package exercise03;
+package exercise02;
 
 public class TooManyCatsException extends RuntimeException {
 

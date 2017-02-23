@@ -1,9 +1,17 @@
-package exercise03;
+package exercise02;
 
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import exercise02.Cat;
+import exercise02.Person;
+import exercise02.TooManyCatsException;
 
 public class PersonTest {
 
@@ -16,19 +24,20 @@ public class PersonTest {
 		aCat = new Cat( "Millie", 4 );
 	}
 
-	@Test
-	public void testAddCat_retrieveSameCat() {
-		aPerson.addCat( aCat );
-		Cat fetchedCat= aPerson.getCat(0);
-		assertEquals( aCat,  fetchedCat );
-		// Shouldn't have more that 1 assertion in each test, but this sets up a good case for later allOf() test:
-		assertSame(aCat, fetchedCat);
-	}
-
 	@Test(expected=TooManyCatsException.class)
 	public void testAddTooManyCatsThrows() {
 		for (int i=0; i<4; i++) {
 			aPerson.addCat( aCat );
 		}
 	}
+
+	@Test
+	public void testAddCat_retrieveSameCat() {
+		aPerson.addCat( aCat );
+		Cat fetchedCat= aPerson.getCat(0);
+		assertEquals( aCat,  fetchedCat );
+		// Shouldn't have more that 1 assertion in each test, but this sets up a good case for later allOf() test:
+		assertSame( aCat, fetchedCat );
+	}
+	
 }
