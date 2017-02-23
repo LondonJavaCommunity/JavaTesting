@@ -1,4 +1,4 @@
-package exercise03;
+package exercise01;
 
 public class Person {
 
