@@ -7,7 +7,7 @@
 package exercise01;
 
 /**
- *  Solution to Exercise 3. Association
+ *  Exercise 3. JUnit. See readme.txt for instructions.
  */
 public class Association {
 
