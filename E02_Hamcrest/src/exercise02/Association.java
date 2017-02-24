@@ -7,7 +7,7 @@
 package exercise02;
 
 /**
- *  Solution to Exercise 3. Association
+ *  Exercise 2. Hamcrest. See readme.txt for instructions
  */
 public class Association {
 

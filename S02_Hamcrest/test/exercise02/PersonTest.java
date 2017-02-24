@@ -52,8 +52,8 @@ public class PersonTest {
 		aPerson.addCat( aCat );	// To check it still passes, even using CopyCat
 		Cat aCatCopy = new Cat( "Millie", 4 );
 		Cat fetchedCat= aPerson.getCat(0);
-//		assertThat ( fetchedCat, allOf(equalTo(aCat), sameInstance(aCat)) );
-		assertThat ( fetchedCat, allOf(equalTo(aCatCopy), sameInstance(aCatCopy)) );	// But this would fail.
+		assertThat ( fetchedCat, allOf(equalTo(aCat), sameInstance(aCat)) );
+//		assertThat ( fetchedCat, allOf(equalTo(aCatCopy), sameInstance(aCatCopy)) );	// But this would fail.
 	}
 	
 }

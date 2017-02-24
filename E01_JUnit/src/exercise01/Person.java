@@ -17,8 +17,7 @@ public class Person {
 	}
 
 	public Person() {
-		name= "Somebody";
-		//MORE: Research better alternative:  this("Somebody", 0, 0);
+		this("Somebody", 0, 0);
 	}
 
 	public Person(Person p) {
